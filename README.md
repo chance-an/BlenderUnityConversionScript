@@ -1,0 +1,1 @@
+Fixes the issues in Blender to Unity auto conversion. Addresses the rotation problem.
