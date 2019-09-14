@@ -75,14 +75,14 @@ if blender280:
     for obj in bpy.context.scene.objects.values():
         obj.select_set(True)
         override_context['selected_objects'] = [obj]
-        bpy.ops.object.transform_apply(rotation=True)
+        bpy.ops.object.transform_apply(rotation=True, location=False)
         obj.select_set(False)
     
     bpy.ops.export_scene.fbx(filepath=outfile,
         check_existing=False,
         use_selection=False,
         use_active_collection=False,
-        object_types= {'ARMATURE','CAMERA','LIGHT','MESH'},
+        object_types= {'ARMATURE', 'MESH'},
         use_mesh_modifiers=True,
         mesh_smooth_type='OFF',
         use_custom_props=True,
