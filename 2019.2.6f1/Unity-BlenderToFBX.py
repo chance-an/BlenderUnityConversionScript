@@ -61,8 +61,8 @@ if blender280:
     # b) apply mirror modifiers
 
 
-    matPatch = Matrix.Rotation(radians(90.0), 4, 'X');
-    matPatch = matPatch @ Matrix.Rotation(radians(-180), 4, 'Y');
+    matPatch = Matrix.Rotation(radians(-90.0), 4, 'X');
+    #matPatch = matPatch @ Matrix.Rotation(radians(0), 4, 'X');
 
     # Rotate objects
     for obj in bpy.context.scene.objects.values():
