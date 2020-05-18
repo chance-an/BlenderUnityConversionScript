@@ -67,7 +67,9 @@ if blender280:
     # Rotate objects
     for obj in bpy.context.scene.objects.values():
         if obj.parent != None:
-            continue    
+            continue  
+        if obj.type == 'ARMATURE': # By default, the non-rotated Armature is correctly oriented
+            continue
         obj.matrix_world = matPatch @ obj.matrix_world
 
     # Apply Rotation
